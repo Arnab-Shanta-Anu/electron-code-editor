@@ -9,7 +9,9 @@
   <body>
     <header>
       <div class="topbar">
-        <div class="title">electron code editor</div>
+        <div class="title">
+          <span class="filename">filename</span> - code editor
+        </div>
         <div class="buttons">
           <button id="minimizeBtn">--</button>
           <button id="maximizeBtn">[]</button>
@@ -17,5 +19,16 @@
         </div>
       </div>
     </header>
+    <main>
+      <aside>
+        <div class="files">files</div>
+        <div class="terminal">terminal</div>
+      </aside>
+      <section>
+        <div class="editor">
+          <textarea id="editor-textarea"></textarea>
+        </div>
+      </section>
+    </main>
   </body>
 </html>

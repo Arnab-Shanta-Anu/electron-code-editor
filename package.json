@@ -10,6 +10,9 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "electron": "^25.2.0"
+    "electron": "^14.2.9"
+  },
+  "dependencies": {
+    "xterm": "^5.2.1"
   }
 }

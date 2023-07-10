@@ -4,12 +4,52 @@
   box-sizing: border-box;
 }
 .topbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
   display: flex;
-  margin: 5px;
+  padding: 5px;
+  background-color: aqua;
+  -webkit-app-region: drag;
+  -webkit-user-modify: none;
 }
 .title {
   flex-grow: 1;
 }
 .buttons {
   justify-self: flex-end;
+}
+main {
+  display: flex;
+  height: 95vh;
+}
+aside {
+  width: 30vw;
+  height: 100%;
+  background-color: red;
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
+  resize: horizontal;
+}
+.files {
+  flex-grow: 1;
+}
+.terminal {
+  height: 30vh;
+  background-color: aquamarine;
+}
+section {
+  flex-grow: 1;
+  height: 100vh;
+}
+.editor {
+  flex-grow: 1;
+  background-color: aliceblue;
+}
+textarea {
+  width: 100%;
+  height: 100%;
+  resize: none;
 }
