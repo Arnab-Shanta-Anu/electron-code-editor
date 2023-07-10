@@ -1,10 +1,17 @@
-window.addEventListener("DOMContentLoaded", () => {
-  const replaceText = (selector, text) => {
-    const element = document.getElementById(selector);
-    if (element) element.innerText = text;
-  };
+const { ipcRenderer } = require("electron");
 
-  for (const type of ["chrome", "node", "electron"]) {
-    replaceText(`${type}-version`, process.versions[type]);
-  }
+window.addEventListener("DOMContentLoaded", () => {
+  const closeBtn = document.getElementById("closeBtn");
+  const minimizeBtn = document.getElementById("minimizeBtn");
+  const maximizeBtn = document.getElementById("maximizeBtn");
+
+  closeBtn.addEventListener("click", () => {
+    ipcRenderer.invoke("closeBtnPress");
+  });
+  minimizeBtn.addEventListener("click", () => {
+    ipcRenderer.invoke("minimizeBtnPress");
+  });
+  maximizeBtn.addEventListener("click", () => {
+    ipcRenderer.invoke("maximizeBtnPress");
+  });
 });
